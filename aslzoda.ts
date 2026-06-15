@@ -1,4 +1,3 @@
-// 1. Strictly Typed Schema Definitions
 interface DeveloperProfile {
     readonly name: string;
     role: string;
@@ -6,7 +5,6 @@ interface DeveloperProfile {
     languages: string[];
 }
 
-// 2. Architecture Instantiation
 const profile: DeveloperProfile = {
     name: "Aslzoda Bozorboyeva",
     role: "Android Architect",
@@ -21,7 +19,6 @@ function wrapInResponsePayload<T>(data: T): { status: number; payload: T } {
 }
 const encapsulated = wrapInResponsePayload(profile);
 
-// 4. High-Order Type Safeguard
 type StatusMode = "Production" | "Staging" | "Development";
 const currentStatus: StatusMode = "Production";
 console.log(`🌐 Deploy Engine Status: ${currentStatus} Mode Checked.`);
